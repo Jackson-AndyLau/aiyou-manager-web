@@ -10,7 +10,7 @@
 	<artifactId>aiyou-manager-web</artifactId>
 	<packaging>war</packaging>
 	<dependencies>
-		<!-- Spring -->
+		<!-- Spring 相关 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
