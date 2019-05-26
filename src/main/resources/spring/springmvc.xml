@@ -20,6 +20,11 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+
+	<!-- 添加js，css资源映射标签 -->
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**" />
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
+
 	<!-- 引用Dubbo服务 -->
 	<dubbo:application name="aiyou-manager-web" />
 	<dubbo:registry protocol="zookeeper"
