@@ -1,5 +1,7 @@
 package com.huazai.b2c.aiyou.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,13 +18,20 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @version V1.0.0
  */
-@RestController
+@Controller
 public class HomePageController
 {
 	@RequestMapping("/")
 	public String getIndex()
 	{
 		return "index";
+	}
+
+	@RequestMapping("{page}")
+	public String getItemList(@PathVariable String page)
+	{
+
+		return page;
 	}
 
 }
