@@ -3,7 +3,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>淘淘商城后台管理系统</title>
+<title>哎呦商城后台管理系统</title>
+<link rel="icon" type="image/x-ico" href="images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.4.1/themes/default/easyui.css" />
 <link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.4.1/themes/icon.css" />
 <link rel="stylesheet" type="text/css" href="css/taotao.css" />
