@@ -39,6 +39,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
+		<!-- /* & / 区别：/* 表示拦截所有资源访问，包括转发的的JSP页面，这个是错误的，不能使用；/ 表示拦截所有的静态资源，不包括转发的JSP页面 -->
 		<servlet-name>aiyou-manager-web</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>

@@ -22,6 +22,8 @@
 	</bean>
 
 	<!-- 添加js，css资源映射标签 -->
+	<!-- location="/WEB-INF/js/" 表示在该目录下的静态资源包括子目录下的静态资源都不会被拦截 -->
+	<!-- mapping="/js/**" 表示访问静态资源的路径的形式，可以访问/js/下的静态资源或者所有子目录下的静态资源 -->
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**" />
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
 	<mvc:resources location="/WEB-INF/images/" mapping="/images/**" />
