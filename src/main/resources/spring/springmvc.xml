@@ -44,4 +44,7 @@
 	<dubbo:reference
 		interface="com.huazai.b2c.aiyou.service.TbContentCategoryService"
 		id="tbContentCategoryService" timeout="300000" />
+	<dubbo:reference
+		interface="com.huazai.b2c.aiyou.service.TbContentService"
+		id="tbContentService" timeout="300000" />
 </beans>
