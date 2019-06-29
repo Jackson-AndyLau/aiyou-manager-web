@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.huazai.b2c.aiyou.common.EasyUITreeNode;
+import com.huazai.b2c.aiyou.repo.AiyouResultData;
 import com.huazai.b2c.aiyou.service.TbContentCategoryService;
 
 /**
@@ -30,8 +31,8 @@ import com.huazai.b2c.aiyou.service.TbContentCategoryService;
 public class TbContentCategoryController
 {
 
-	@Autowired(required = true)
-	TbContentCategoryService tbContentCategoryService;
+	@Autowired
+	private TbContentCategoryService tbContentCategoryService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
@@ -39,6 +40,14 @@ public class TbContentCategoryController
 	{
 		List<EasyUITreeNode> contentCategoryList = tbContentCategoryService.getTbContentCategoryList(parentId);
 		return contentCategoryList;
+	}
+
+	@RequestMapping("/create")
+	@ResponseBody
+	public AiyouResultData createContentCatetory(Long parentId, String name)
+	{
+		AiyouResultData aiyouResultData = tbContentCategoryService.addTbContentCategory(parentId, name);
+		return aiyouResultData;
 	}
 
 }

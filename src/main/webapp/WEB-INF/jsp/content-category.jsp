@@ -74,7 +74,7 @@ function menuHandler(item){
             parent: (node?node.target:null), //被添加的子节点的父
             //
             data: [{
-                text: '新建分类123',//节点的内容
+                text: '新建分类',//节点的内容
                 id : 0,//节点的id
                 parentId : node.id//新建的节点的父节点的id
             }]
