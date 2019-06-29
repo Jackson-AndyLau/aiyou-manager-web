@@ -42,12 +42,28 @@ public class TbContentCategoryController
 		return contentCategoryList;
 	}
 
-	@RequestMapping("/create")
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	@ResponseBody
-	public AiyouResultData createContentCatetory(Long parentId, String name)
+	public AiyouResultData createContentCategory(Long parentId, String name)
 	{
 		AiyouResultData aiyouResultData = tbContentCategoryService.addTbContentCategory(parentId, name);
 		return aiyouResultData;
+	}
+
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	@ResponseBody
+	public AiyouResultData updateContentCategory(Long id, String name)
+	{
+		AiyouResultData resultData = tbContentCategoryService.updateTbContentCategory(id, name);
+		return resultData;
+	}
+
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	@ResponseBody
+	public AiyouResultData deleteTbContentCategory(Long id)
+	{
+		AiyouResultData resultData = tbContentCategoryService.deleteTbContentCategory(id);
+		return resultData;
 	}
 
 }
