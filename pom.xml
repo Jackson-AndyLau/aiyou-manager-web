@@ -69,6 +69,12 @@
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 		</dependency>
+		<!-- FastDFS Java 客户端 -->
+		<dependency>
+			<groupId>org.csource</groupId>
+			<artifactId>fastdfs-client-java</artifactId>
+			<version>1.27-SNAPSHOT</version>
+		</dependency>
 		<!-- dubbo 相关 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
