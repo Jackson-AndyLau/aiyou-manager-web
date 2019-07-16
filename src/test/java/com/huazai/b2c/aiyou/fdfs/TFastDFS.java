@@ -29,8 +29,8 @@ public class TFastDFS
 	@Test
 	public void TFileUpload() throws IOException, MyException
 	{
-		// 1、加载配置文件
-		ClientGlobal.init("/aiyou-manager-web/src/main/resources/resources/fdfs_client.conf");
+		// 1、加载配置文件 /aiyou-manager-web/src/main/resources/resources/fdfs_client.conf
+		ClientGlobal.init("src/main/resources/resources/fdfs_client.conf");
 		// 2、创建一个TrackerClient对象
 		TrackerClient trackerClient = new TrackerClient();
 		// 3、通过TrackerClient创建与TrackerServer的连接
@@ -40,7 +40,7 @@ public class TFastDFS
 		// 5、创建一个StorageClient对象
 		StorageClient storageClient = new StorageClient(trackerServer, storageServer);
 		// 6、上传图片，注意后缀名不需要 . 符号
-		String[] file = storageClient.upload_file("", "", null);
+		String[] file = storageClient.upload_file("D:\\timg2.jpg", "jpg", null);
 		// 7、打印文件路径
 		for (String string : file)
 		{
