@@ -27,9 +27,8 @@ import com.huazai.b2c.aiyou.web.util.FastDFSClient;
  */
 public class TFastDFS
 {
-
-	private final String file_config = "src/main/resources/resources/fdfs_client.conf";
-
+	private final String file_config = "src/main/resources/resource/fdfs_client.conf";
+	
 	/**
 	 * 
 	 * @author HuaZai

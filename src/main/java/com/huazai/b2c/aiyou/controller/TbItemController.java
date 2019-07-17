@@ -1,5 +1,8 @@
 package com.huazai.b2c.aiyou.controller;
 
+import java.awt.PageAttributes.MediaType;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Description;
 import org.springframework.stereotype.Controller;
@@ -44,11 +47,20 @@ public class TbItemController
 	}
 
 	@Description(value = "添加商品")
-	@RequestMapping(value = "/save")
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	@ResponseBody
 	public AiyouResultData addTbItem(TbItem item, String desc)
 	{
 		AiyouResultData resultData = tbItemService.addTbItem(item, desc);
+		return resultData;
+	}
+
+	@Description(value = "删除商品")
+	@RequestMapping(value = "/delete")
+	@ResponseBody
+	public AiyouResultData deleteTbItem(List<Long> ids)
+	{
+		AiyouResultData resultData = tbItemService.deleteTbItem(ids);
 		return resultData;
 	}
 }
