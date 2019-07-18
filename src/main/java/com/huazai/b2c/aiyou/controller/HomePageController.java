@@ -1,5 +1,6 @@
 package com.huazai.b2c.aiyou.controller;
 
+import org.springframework.context.annotation.Description;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,12 +21,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomePageController
 {
+
+	@Description("首页显示")
 	@RequestMapping("/")
 	public String getIndex()
 	{
 		return "index";
 	}
 
+	@Description("站内所有页面跳转")
 	@RequestMapping("{page}")
 	public String getItemList(@PathVariable String page)
 	{

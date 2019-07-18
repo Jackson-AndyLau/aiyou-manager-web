@@ -3,6 +3,7 @@ package com.huazai.b2c.aiyou.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Description;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -34,6 +35,7 @@ public class TbContentCategoryController
 	@Autowired
 	private TbContentCategoryService tbContentCategoryService;
 
+	@Description("获取网站内容分类列表")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
 	public List<EasyUITreeNode> getContentCategoryList(@RequestParam(value = "id", defaultValue = "0") Long parentId)
@@ -42,6 +44,7 @@ public class TbContentCategoryController
 		return contentCategoryList;
 	}
 
+	@Description("创建网站内容分类")
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	@ResponseBody
 	public AiyouResultData createContentCategory(Long parentId, String name)
@@ -58,6 +61,7 @@ public class TbContentCategoryController
 		return resultData;
 	}
 
+	@Description("删除网站内容分类")
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	@ResponseBody
 	public AiyouResultData deleteTbContentCategory(Long id)

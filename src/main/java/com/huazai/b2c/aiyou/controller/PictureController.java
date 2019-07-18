@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Description;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -52,6 +53,7 @@ public class PictureController
 	 *
 	 * @version : V1.0.0
 	 */
+	@Description("图片上传")
 	@RequestMapping(value = "/upload", produces = "text/plain;charset=utf-8")
 	@ResponseBody
 	public String fileUpload(MultipartFile uploadFile)
