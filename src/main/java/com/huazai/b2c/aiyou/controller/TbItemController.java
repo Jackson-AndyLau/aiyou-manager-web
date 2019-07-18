@@ -3,6 +3,7 @@ package com.huazai.b2c.aiyou.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Description;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.huazai.b2c.aiyou.common.EasyUIDataGrid;
 import com.huazai.b2c.aiyou.pojo.TbItem;
 import com.huazai.b2c.aiyou.repo.AiyouResultData;
+import com.huazai.b2c.aiyou.service.TbItemDescService;
 import com.huazai.b2c.aiyou.service.TbItemService;
 
 /**
@@ -32,6 +34,9 @@ public class TbItemController
 
 	@Autowired
 	private TbItemService tbItemService;
+
+	@Autowired
+	private TbItemDescService tbItemDescService;
 
 	@Description(value = "获取商品列表")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -78,4 +83,32 @@ public class TbItemController
 		AiyouResultData resultData = tbItemService.reshelfTbItem(ids);
 		return resultData;
 	}
+
+	@Description(value = "查询商品参数")
+	@RequestMapping(value = "/param/item/query/{itemId}")
+	@ResponseBody
+	public AiyouResultData queryTbItemParam(@PathVariable(value = "itemId") Long itemId)
+	{
+		AiyouResultData resultData = tbItemService.findTbItemById(itemId);
+		return resultData;
+	}
+
+	@Description(value = "查询商品描述信息")
+	@RequestMapping(value = "/query/item/desc/{itemId}")
+	@ResponseBody
+	private AiyouResultData queryTbItemDesc(@PathVariable(value = "itemId") Long itemId)
+	{
+		AiyouResultData resultData = tbItemDescService.findTbItemDescById(itemId);
+		return resultData;
+	}
+
+	@Description(value = "修改商品信息")
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	@ResponseBody
+	public AiyouResultData updateTbItem(TbItem tbItem, String desc)
+	{
+		AiyouResultData resultData = tbItemService.updateTbItem(tbItem, desc);
+		return resultData;
+	}
+
 }
