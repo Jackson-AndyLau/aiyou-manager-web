@@ -43,11 +43,29 @@ public class TbContentController
 	}
 
 	@Description("新增网站内容")
-	@RequestMapping(value = "/save",method=RequestMethod.POST)
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	@ResponseBody
-	public AiyouResultData add(TbContent tbContent)
+	public AiyouResultData addTbContent(TbContent tbContent)
 	{
 		AiyouResultData resultData = tbContentService.addTbContent(tbContent);
+		return resultData;
+	}
+
+	@Description("根据ID删除网站内容")
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	@ResponseBody
+	public AiyouResultData deleteTbContent(String ids)
+	{
+		AiyouResultData resultData = tbContentService.deleteTbContent(ids);
+		return resultData;
+	}
+
+	@Description(value = "修改网站内容")
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	@ResponseBody
+	public AiyouResultData updateTbContent(TbContent tbContent)
+	{
+		AiyouResultData resultData = tbContentService.updateTbContent(tbContent);
 		return resultData;
 	}
 
