@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.huazai.b2c.aiyou.common.EasyUIDataGrid;
@@ -41,9 +42,9 @@ public class TbItemController
 	@Description(value = "获取商品列表")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
-	public EasyUIDataGrid getItemList(Integer page, Integer rows)
+	public EasyUIDataGrid getItemList(@RequestParam(value = "page", defaultValue = "1") Integer page,
+			@RequestParam(value = "row", defaultValue = "30") Integer rows)
 	{
-
 		EasyUIDataGrid easyUIDataGrid = tbItemService.getTbItemList(page, rows, null);
 		return easyUIDataGrid;
 	}
