@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.huazai.b2c.aiyou.service.TDubboService;
+import com.huazai.b2c.aiyou.service.TbDubboService;
 
 /**
  * 
@@ -25,7 +25,7 @@ public class TDubboController
 {
 
 	@Autowired
-	private TDubboService tDubboService;
+	private TbDubboService tDubboService;
 
 	@RequestMapping("/getLocalDate")
 	public String getLocalDate()

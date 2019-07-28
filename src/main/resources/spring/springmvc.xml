@@ -15,7 +15,8 @@
 		base-package="com.huazai.b2c.aiyou.controller" />
 	<mvc:annotation-driven />
 	<!-- 加载配置文件配置 -->
-	<context:property-placeholder location="classpath:/resource/*.properties" />
+	<context:property-placeholder
+		location="classpath:/resource/*.properties" />
 	<!-- 配置视图解析器 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
