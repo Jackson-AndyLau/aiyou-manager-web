@@ -65,4 +65,7 @@
 	<dubbo:reference
 		interface="com.huazai.b2c.aiyou.service.TbItemCatService"
 		id="tbItemCatService" timeout="300000" />
+	<dubbo:reference
+		interface="com.huazai.b2c.aiyou.service.SearchItemService"
+		id="searchItemService" timeout="300000" />
 </beans>
