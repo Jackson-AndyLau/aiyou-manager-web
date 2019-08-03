@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.fdfs;
+package com.huazai.b2c.aiyou.test.fdfs;
 
 import java.io.IOException;
 
