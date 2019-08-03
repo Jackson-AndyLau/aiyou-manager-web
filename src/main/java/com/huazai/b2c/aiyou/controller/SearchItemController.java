@@ -23,7 +23,7 @@ import com.huazai.b2c.aiyou.service.SearchItemService;
  * @version V1.0.0
  */
 @Controller
-@RequestMapping(value = "/index")
+@RequestMapping(value = "/search/item")
 public class SearchItemController
 {
 

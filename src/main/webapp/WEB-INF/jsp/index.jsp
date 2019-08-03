@@ -36,6 +36,13 @@
 	         		<li data-options="attributes:{'url':'content'}">内容管理</li>
 	         	</ul>
          	</li>
+         	<li>
+         		<span>网站索引管理</span>
+         		<ul>
+	         		<li data-options="attributes:{'url':'search_item_import'}">导入索引</li>
+	         		<li data-options="attributes:{'url':'search_item_add'}">新增索引</li>
+	         	</ul>
+         	</li>
          </ul>
     </div>
     <div data-options="region:'center',title:''">
