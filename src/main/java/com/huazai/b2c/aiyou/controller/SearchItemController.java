@@ -30,7 +30,7 @@ public class SearchItemController
 	@Autowired
 	private SearchItemService searchItemService;
 
-	@RequestMapping(value = "/importAll", method = RequestMethod.POST)
+	@RequestMapping(value = "/importall", method = RequestMethod.POST)
 	@ResponseBody
 	public AiyouResultData importItemAll()
 	{
