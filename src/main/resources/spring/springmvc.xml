@@ -48,8 +48,8 @@
 
 	<!-- 应用调用远程服务接口 -->
 	<dubbo:reference
-		interface="com.huazai.b2c.aiyou.service.TDubboService"
-		id="tDubboService" timeout="300000" />
+		interface="com.huazai.b2c.aiyou.service.TbDubboService"
+		id="tbDubboService" timeout="300000" />
 	<dubbo:reference
 		interface="com.huazai.b2c.aiyou.service.TbItemService"
 		id="tbItemService" timeout="300000" />
