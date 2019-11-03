@@ -24,16 +24,14 @@ import com.huazai.b2c.aiyou.service.SearchItemService;
  */
 @Controller
 @RequestMapping(value = "/search/item")
-public class SearchItemController
-{
+public class SearchItemController {
 
 	@Autowired
 	private SearchItemService searchItemService;
 
 	@RequestMapping(value = "/importall", method = RequestMethod.POST)
 	@ResponseBody
-	public AiyouResultData importItemAll()
-	{
+	public AiyouResultData importItemAll() {
 		AiyouResultData resultData = searchItemService.importItemAll();
 		return resultData;
 	}
