@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.controller;
+package com.huazai.aiyou.manager.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.huazai.b2c.aiyou.utils.JsonUtils;
-import com.huazai.b2c.aiyou.web.util.FastDFSClient;
+import com.huazai.aiyou.common.utils.JsonUtils;
+import com.huazai.aiyou.manager.web.util.FastDFSClient;
 
 /**
  * 

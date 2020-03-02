@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.controller;
+package com.huazai.aiyou.manager.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.huazai.b2c.aiyou.repo.AiyouResultData;
-import com.huazai.b2c.aiyou.service.SearchItemService;
+import com.huazai.aiyou.common.response.AiyouResultData;
+import com.huazai.aiyou.search.service.SearchItemService;
 
 /**
  * 

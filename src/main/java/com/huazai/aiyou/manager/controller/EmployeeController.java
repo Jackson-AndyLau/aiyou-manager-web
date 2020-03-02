@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.controller;
+package com.huazai.aiyou.manager.controller;
 
 import org.springframework.stereotype.Controller;
 

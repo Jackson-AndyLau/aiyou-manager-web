@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.web.util;
+package com.huazai.aiyou.manager.web.util;
 
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.ClientGlobal;
@@ -56,12 +56,9 @@ public class FastDFSClient
 	 * Description:
 	 * </p>
 	 * 
-	 * @param fileName
-	 *            文件全路径
-	 * @param extName
-	 *            文件扩展名，不包含（.）
-	 * @param metas
-	 *            文件扩展信息
+	 * @param fileName 文件全路径
+	 * @param extName  文件扩展名，不包含（.）
+	 * @param metas    文件扩展信息
 	 * @return
 	 * @throws Exception
 	 */
@@ -90,12 +87,9 @@ public class FastDFSClient
 	 * Description:
 	 * </p>
 	 * 
-	 * @param fileContent
-	 *            文件的内容，字节数组
-	 * @param extName
-	 *            文件扩展名
-	 * @param metas
-	 *            文件扩展信息
+	 * @param fileContent 文件的内容，字节数组
+	 * @param extName     文件扩展名
+	 * @param metas       文件扩展信息
 	 * @return
 	 * @throws Exception
 	 */

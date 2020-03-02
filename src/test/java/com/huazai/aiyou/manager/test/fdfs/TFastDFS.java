@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.test.fdfs;
+package com.huazai.aiyou.manager.test.fdfs;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import org.csource.fastdfs.TrackerClient;
 import org.csource.fastdfs.TrackerServer;
 import org.junit.Test;
 
-import com.huazai.b2c.aiyou.web.util.FastDFSClient;
+import com.huazai.aiyou.manager.web.util.FastDFSClient;
 
 /**
  * 

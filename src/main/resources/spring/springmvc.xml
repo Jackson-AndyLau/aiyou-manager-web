@@ -12,7 +12,7 @@
 
 	<!-- 配置扫描包 -->
 	<context:component-scan
-		base-package="com.huazai.b2c.aiyou.controller" />
+		base-package="com.huazai.aiyou.manager.controller" />
 	<mvc:annotation-driven />
 	<!-- 加载配置文件配置 -->
 	<context:property-placeholder
@@ -48,24 +48,24 @@
 
 	<!-- 应用调用远程服务接口 -->
 	<dubbo:reference
-		interface="com.huazai.b2c.aiyou.service.TbDubboService"
+		interface="com.huazai.aiyou.manager.service.TbDubboService"
 		id="tbDubboService" timeout="300000" />
 	<dubbo:reference
-		interface="com.huazai.b2c.aiyou.service.TbItemService"
+		interface="com.huazai.aiyou.manager.service.TbItemService"
 		id="tbItemService" timeout="300000" />
 	<dubbo:reference
-		interface="com.huazai.b2c.aiyou.service.TbItemDescService"
+		interface="com.huazai.aiyou.manager.service.TbItemDescService"
 		id="tbItemDescService" timeout="300000" />
 	<dubbo:reference
-		interface="com.huazai.b2c.aiyou.service.TbContentCategoryService"
-		id="tbContentCategoryService" timeout="300000" />
-	<dubbo:reference
-		interface="com.huazai.b2c.aiyou.service.TbContentService"
-		id="tbContentService" timeout="300000" />
-	<dubbo:reference
-		interface="com.huazai.b2c.aiyou.service.TbItemCatService"
+		interface="com.huazai.aiyou.manager.service.TbItemCatService"
 		id="tbItemCatService" timeout="300000" />
 	<dubbo:reference
-		interface="com.huazai.b2c.aiyou.service.SearchItemService"
+		interface="com.huazai.aiyou.content.service.TbContentCategoryService"
+		id="tbContentCategoryService" timeout="300000" />
+	<dubbo:reference
+		interface="com.huazai.aiyou.content.service.TbContentService"
+		id="tbContentService" timeout="300000" />
+	<dubbo:reference
+		interface="com.huazai.aiyou.search.service.SearchItemService"
 		id="searchItemService" timeout="300000" />
 </beans>

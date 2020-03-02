@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.controller;
+package com.huazai.aiyou.manager.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.huazai.b2c.aiyou.common.EasyUITreeNode;
-import com.huazai.b2c.aiyou.service.TbItemCatService;
+import com.huazai.aiyou.common.module.EasyUITreeNode;
+import com.huazai.aiyou.manager.service.TbItemCatService;
 
 /**
  * 

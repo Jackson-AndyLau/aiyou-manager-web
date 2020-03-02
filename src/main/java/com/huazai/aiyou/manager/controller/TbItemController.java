@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.controller;
+package com.huazai.aiyou.manager.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Description;
@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.huazai.b2c.aiyou.common.EasyUIDataGrid;
-import com.huazai.b2c.aiyou.pojo.TbItem;
-import com.huazai.b2c.aiyou.repo.AiyouResultData;
-import com.huazai.b2c.aiyou.service.TbItemDescService;
-import com.huazai.b2c.aiyou.service.TbItemService;
+import com.huazai.aiyou.common.module.EasyUIDataGrid;
+import com.huazai.aiyou.common.response.AiyouResultData;
+import com.huazai.aiyou.manager.pojo.TbItem;
+import com.huazai.aiyou.manager.service.TbItemDescService;
+import com.huazai.aiyou.manager.service.TbItemService;
 
 /**
  * 
