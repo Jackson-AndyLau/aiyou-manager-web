@@ -31,8 +31,8 @@ import com.huazai.aiyou.manager.web.util.FastDFSClient;
 public class PictureController
 {
 
-	@Value("${AIYOU_IMAGE_BASE_URL}")
-	private String AIYOU_IMAGE_BASE_URL;
+	@Value("${AIYOU_TB_IMAGE_BASE_URL}")
+	private String AIYOU_TB_IMAGE_BASE_URL;
 
 	/**
 	 * 
@@ -68,7 +68,7 @@ public class PictureController
 			// 3、执行上传操作
 			String filePath = dfsClient.uploadFile(uploadFile.getBytes(), extName);
 			// 4、封装返回数据
-			String url = AIYOU_IMAGE_BASE_URL + filePath;
+			String url = AIYOU_TB_IMAGE_BASE_URL + filePath;
 			Map<String, Object> success = new HashMap<>();
 			success.put("error", 0);
 			success.put("msg", "图片上传成功");
