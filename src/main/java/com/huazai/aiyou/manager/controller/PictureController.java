@@ -31,7 +31,7 @@ import com.huazai.aiyou.manager.web.util.FastDFSClient;
 public class PictureController
 {
 
-	@Value("${AIYOU_TB_IMAGE_BASE_URL}")
+	@Value(value = "${AIYOU_TB_IMAGE_BASE_URL}")
 	private String AIYOU_TB_IMAGE_BASE_URL;
 
 	/**
@@ -45,6 +45,7 @@ public class PictureController
 	 *              <li>@ResponseBody注解返回java对象实际上是JSON数据，返回的Content-Type为：application/json;charset=UTF-8
 	 *              <li>返回字符串时的Content-Type为：text/plain;charset=UTF-8，所需要修改为：
 	 *              produces = "text/plain;charset=utf-8"
+	 *              <li> 上传文件时，注意开启22122和23000端口，否则回出现上传失败的情况
 	 *              </ul>
 	 * @createdTime 2017年06月11日
 	 * @param multipartFile
