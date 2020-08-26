@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Description;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.huazai.aiyou.common.module.EasyUIDataGrid;
 import com.huazai.aiyou.common.module.EasyUITreeNode;
 import com.huazai.aiyou.manager.service.TbItemCatService;
 
@@ -33,13 +35,23 @@ public class TbItemCatController
 	@Autowired
 	private TbItemCatService tbItemCatService;
 
-	@Description("获取商品类目列表")
+	@Description("根据父级ID获取商品规格列表")
 	@RequestMapping(value = "/list")
 	@ResponseBody
 	public List<EasyUITreeNode> getTbItemCatList(@RequestParam(value = "id", defaultValue = "0") Long parentId)
 	{
-		List<EasyUITreeNode> list = tbItemCatService.getTbItemCatList(parentId);
+		List<EasyUITreeNode> list = tbItemCatService.getTbItemCatListById(parentId);
 		return list;
+	}
+	
+	@Description(value = "获取商品规格列表")
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	@ResponseBody
+	public EasyUIDataGrid getItemList(@RequestParam(value = "page", defaultValue = "1") Integer page,
+			@RequestParam(value = "row", defaultValue = "30") Integer rows)
+	{
+		EasyUIDataGrid easyUIDataGrid = tbItemCatService.getTbItemCatList(page, rows, null);
+		return easyUIDataGrid;
 	}
 
 }
